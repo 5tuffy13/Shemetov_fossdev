@@ -13,10 +13,10 @@ def test_divide():
 
 def test_divide_prohibited():
     try:
-        divide("A","B")
-        print("test passed")
-    except:
-        print("Test string-division fails")
+        devide([1,2,3],[4,5,6])
+	print("Test list-divison passed")
+	assert False
+
 
 def test_divide_zero():
     a = 2

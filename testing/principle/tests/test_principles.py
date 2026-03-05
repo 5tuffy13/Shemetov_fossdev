@@ -12,10 +12,13 @@
 # Тесты не должны использовать ВСЕ наборы входных параметров
 # Тесты должны покрывать "кластеры" входных параметров
 # Тестовые функции должны тестировать логические блоки
-# Тесты должны обнаруживать новые ошибки (pescicide paradox)
+
+# Тесты должны обнаруживать новые ошибки, использование
+# одних и тех же типов может препятствовать этому (pescicide paradox)
+
 # Тесты покрывают как успешные, так и ошибочные кейсы
 
-from math_demo import add, add_with_bug
+from math_demo import add, add_with_bug, calculate_tax_bug, calculate_tax
 
 
 def test_addition():
@@ -64,6 +67,27 @@ def test_addition_commutativity():
     print("Test commutativity passed")
 
 
+# def test_tax_calculator():
+#     assert calculate_tax_bug(1000) == 150
+#     assert calculate_tax_bug(100) == 15
+#     assert calculate_tax_bug(10) == 1.5
+#     assert calculate_tax_bug(1) == 0.15
+#     assert calculate_tax_bug(234) == 35.1
+#     print("Test tax calculator passed")
+#     assert calculate_tax_bug(2.34) == 0.35 # 0.351
+
+
+def test_tax_calculator():
+    assert calculate_tax(1000) == 150
+    assert calculate_tax(100) == 15
+    assert calculate_tax(10) == 1.5
+    assert calculate_tax(1) == 0.15
+    assert calculate_tax(234) == 35.1
+    print("Test tax calculator passed")
+    assert calculate_tax(2.34) == 0.35 # 0.351
+
+
+
 if __name__ == "__main__":
     test_addition()
     #test_addition_with_bug()
@@ -71,3 +95,4 @@ if __name__ == "__main__":
     # test_addition_overkill()
     test_addition_clusters()
     test_addition_commutativity()
+    test_tax_calculator()

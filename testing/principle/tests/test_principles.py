@@ -11,6 +11,7 @@
 
 # Тесты не должны использовать ВСЕ наборы входных параметров
 # Тесты должны покрывать "кластеры" входных параметров
+# Тестовые функции должны тестировать логические блоки
 # Тесты должны обнаруживать новые ошибки (pescicide paradox)
 # Тесты покрывают как успешные, так и ошибочные кейсы
 
@@ -57,6 +58,11 @@ def test_addition_clusters():
     print("test clusters passed")
 
 
+def test_addition_commutativity():
+    assert add(7,6) == 13
+    assert add(6,7) == 13
+    print("Test commutativity passed")
+
 
 if __name__ == "__main__":
     test_addition()
@@ -64,3 +70,4 @@ if __name__ == "__main__":
     test_addition_dublicate()
     # test_addition_overkill()
     test_addition_clusters()
+    test_addition_commutativity()

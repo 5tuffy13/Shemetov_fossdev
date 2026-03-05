@@ -1,476 +1,216 @@
-Last login: Thu Mar  5 09:30:42 on console
-compinit:527: no such file or directory: /opt/homebrew/share/zsh/site-functions/_docker-compose
-➜  ~ pkill ollama
-➜  ~ ls
-заголовки.txt            Applications (Parallels) ensemble.ipynb           Music                    Public                   shemetov.txt             vpn_access.txt
-AD-homeworks             Desktop                  Library                  my-scripts               requirements.txt         Throne.app
-aerospace.toml           Documents                main                     Parallels                sandbox                  trash
-Applications             Downloads                Movies                   Pictures                 scikit_learn_data        VirtualBox VMs
-➜  ~ cd Desktop
-➜  Desktop ls
-desktop.ini          recovery_key_element Windows 11
-➜  Desktop cd ..
-➜  ~ ls Documents
-положение.pdf               2026-03-02 12.15.28.jpg     CVKiselev                   forkroma                    Klei                        R.ipynb                     Shemetov_fossdev
-2026-03-01_13-12-20.png     brbr                        desktop.ini                 fossdev_fork                nodes                       shabalin                    Szeliski_CVAABook_2ndEd.pdf
-➜  ~ cd Shemtov_fossdev
-cd: no such file or directory: Shemtov_fossdev
-➜  ~ cd Shemetov_fossdev
-cd: no such file or directory: Shemetov_fossdev
-➜  ~ cd ./Documents/Shemetov_fossdev
-➜  Shemetov_fossdev git:(feature/linux-as-runenv) git status
-On branch feature/linux-as-runenv
-nothing to commit, working tree clean
-➜  Shemetov_fossdev git:(feature/linux-as-runenv) git switch main'
-quote> ;
-quote>
-➜  Shemetov_fossdev git:(feature/linux-as-runenv) git switch main
-;
-Switched to branch 'main'
-Your branch is up to date with 'origin/main'.
-➜  Shemetov_fossdev git:(main) git status
-On branch main
-Your branch is up to date with 'origin/main'.
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[codz]
+*$py.class
 
-nothing to commit, working tree clean
-➜  Shemetov_fossdev git:(main) git switch -c feature/testing
-Switched to a new branch 'feature/testing'
-➜  Shemetov_fossdev git:(feature/testing) mkdir testing
-➜  Shemetov_fossdev git:(feature/testing) cd testing
-➜  testing git:(feature/testing) mkdir principle
-➜  testing git:(feature/testing) mkdir principle/src
-➜  testing git:(feature/testing) mkdir principle/tests
-➜  testing git:(feature/testing) mkdir principle/src/math_demo.py
-➜  testing git:(feature/testing) touch principle/tests/test_principles.py
-➜  testing git:(feature/testing) ✗ rm -rf principle/src/math_demo.py
-➜  testing git:(feature/testing) ✗ touch principle/src/math_demo.py
-➜  testing git:(feature/testing) ✗ ls
-principle
-➜  testing git:(feature/testing) ✗ ls principle
-src   tests
-➜  testing git:(feature/testing) ✗ ls principle/sr
-ls: principle/sr: No such file or directory
-➜  testing git:(feature/testing) ✗ ls principle/src
-math_demo.py
-➜  testing git:(feature/testing) ✗ ls principle/tests
-test_principles.py
-➜  testing git:(feature/testing) ✗ cd ../
-➜  Shemetov_fossdev git:(feature/testing) ✗ ls
-__pycache__     linux_as_runenv README.md       script.py       script.pyc      test.py         testing
-➜  Shemetov_fossdev git:(feature/testing) ✗  python ./testing/principle/tests/test_principles.py
-zsh: command not found: python
-➜  Shemetov_fossdev git:(feature/testing) ✗  python3 ./testing/principle/tests/test_principles.py
-Test addition passed
-➜  Shemetov_fossdev git:(feature/testing) ✗  python3 ./testing/principle/tests/test_principles.py
-➜  Shemetov_fossdev git:(feature/testing) ✗  python3 ./testing/principle/tests/test_principles.py
-Test addition passed
-➜  Shemetov_fossdev git:(feature/testing) ✗ cd testing/principle
-➜  principle git:(feature/testing) ✗ code setup.py
-➜  principle git:(feature/testing) ✗ brew install setuptools
-==> Auto-updating Homebrew...
-Adjust how often this is run with `$HOMEBREW_AUTO_UPDATE_SECS` or disable with
-`$HOMEBREW_NO_AUTO_UPDATE=1`. Hide these hints with `$HOMEBREW_NO_ENV_HINTS=1` (see `man brew`).
-==> Auto-updated Homebrew!
-Updated 2 taps (homebrew/core and homebrew/cask).
-==> New Formulae
-betterleaks: Secrets scanner built for configurability and speed
-cni-plugins: Container Network Interface plugins
-containerd: Open and reliable container runtime
-git-pkgs: Track package dependencies across git history
-landrun: Lightweight, secure sandbox for running Linux processes using Landlock LSM
-lua@5.4: Powerful, lightweight programming language
-mp4ff: Tools for parsing and manipulating MP4/ISOBMFF files
-protobuf@33: Protocol buffers (Google's data interchange format)
-rootlesskit: Linux-native "fake root" for implementing rootless containers
-runc: CLI tool for spawning and running containers according to the OCI specification
-rustypaste-cli: CLI tool for rustypaste
-skills: Open agent skills ecosystem
-termframe: Terminal output SVG screenshot tool
-termusic: Music Player TUI written in Rust
-x-cli: Command-line power tool for Twitter
-==> New Casks
-bettercapture: Screen recorder
-cmux: Ghostty-based terminal with vertical tabs and notifications for AI coding agents
-connectiq-sdk-manager: Manage SDKs and download device definitions for Garmin Connect IQ development
-fabric-app: Personal knowledge management and note-taking app
-font-datatype
-font-gmarket-sans
-font-iosevka-charon
-font-iosevka-charon-mono
-itsytv: Menu bar app for controlling your Apple TV
-kotlin-lsp: Official Kotlin Language Server
-spokenly: Dictation and transcription app with AI-powered editing
-vcmi: Open-source engine for Heroes of Might & Magic III
+# C extensions
+*.so
 
-You have 57 outdated formulae and 3 outdated casks installed.
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
 
-Warning: No available formula with the name "setuptools". Did you mean rtptools?
-==> Searching for similarly named formulae and casks...
-==> Formulae
-python-setuptools                                                                                        rtptools
+# PyInstaller
+#   Usually these files are written by a python script from a template
+#   before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
 
-To install python-setuptools, run:
-  brew install python-setuptools
-➜  principle git:(feature/testing) ✗ brew install python-setuptools
-==> Fetching downloads for: python-setuptools
-✔︎ Bottle Manifest python-setuptools (82.0.0)                                                                                                                                         Downloaded    2.3KB/  2.3KB
-✔︎ Bottle python-setuptools (82.0.0)                                                                                                                                                  Downloaded  941.6KB/941.6KB
-==> Pouring python-setuptools--82.0.0.all.bottle.tar.gz
-🍺  /opt/homebrew/Cellar/python-setuptools/82.0.0: 1,290 files, 3.8MB
-==> Running `brew cleanup python-setuptools`...
-Disable this behaviour by setting `HOMEBREW_NO_INSTALL_CLEANUP=1`.
-Hide these hints with `HOMEBREW_NO_ENV_HINTS=1` (see `man brew`).
-➜  principle git:(feature/testing) ✗ pip install -e .
-zsh: command not found: pip
-➜  principle git:(feature/testing) ✗ pip3 install -e .
-error: externally-managed-environment
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
 
-× This environment is externally managed
-╰─> To install Python packages system-wide, try brew install
-    xyz, where xyz is the package you are trying to
-    install.
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py.cover
+.hypothesis/
+.pytest_cache/
+cover/
 
-    If you wish to install a Python library that isn't in Homebrew,
-    use a virtual environment:
+# Translations
+*.mo
+*.pot
 
-    python3 -m venv path/to/venv
-    source path/to/venv/bin/activate
-    python3 -m pip install xyz
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
 
-    If you wish to install a Python application that isn't in Homebrew,
-    it may be easiest to use 'pipx install xyz', which will manage a
-    virtual environment for you. You can install pipx with
+# Flask stuff:
+instance/
+.webassets-cache
 
-    brew install pipx
+# Scrapy stuff:
+.scrapy
 
-    You may restore the old behavior of pip by passing
-    the '--break-system-packages' flag to pip, or by adding
-    'break-system-packages = true' to your pip.conf file. The latter
-    will permanently disable this error.
+# Sphinx documentation
+docs/_build/
 
-    If you disable this error, we STRONGLY recommend that you additionally
-    pass the '--user' flag to pip, or set 'user = true' in your pip.conf
-    file. Failure to do this can result in a broken Homebrew installation.
+# PyBuilder
+.pybuilder/
+target/
 
-    Read more about this behavior here: <https://peps.python.org/pep-0668/>
+# Jupyter Notebook
+.ipynb_checkpoints
 
-note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
-hint: See PEP 668 for the detailed specification.
-➜  principle git:(feature/testing) ✗ brew install -e .
-Usage: brew install [options] formula|cask [...]
+# IPython
+profile_default/
+ipython_config.py
 
-Install a formula or cask. Additional options specific to a formula may be
-appended to the command.
+# pyenv
+#   For a library or package, you might want to ignore these files since the code is
+#   intended to run in multiple environments; otherwise, check them in:
+# .python-version
 
-Unless $HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK is set, brew upgrade or brew
-reinstall will be run for outdated dependents and dependents with broken
-linkage, respectively.
+# pipenv
+#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
+#   However, in case of collaboration, if having platform-specific dependencies or dependencies
+#   having no cross-platform support, pipenv may install dependencies that don't work, or not
+#   install all needed dependencies.
+# Pipfile.lock
 
-Unless $HOMEBREW_NO_INSTALL_CLEANUP is set, brew cleanup will then be run
-for the installed formulae or, every 30 days, for all formulae.
+# UV
+#   Similar to Pipfile.lock, it is generally recommended to include uv.lock in version control.
+#   This is especially recommended for binary packages to ensure reproducibility, and is more
+#   commonly ignored for libraries.
+# uv.lock
 
-Unless $HOMEBREW_NO_INSTALL_UPGRADE is set, brew install formula will
-upgrade formula if it is already installed but outdated.
+# poetry
+#   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
+#   This is especially recommended for binary packages to ensure reproducibility, and is more
+#   commonly ignored for libraries.
+#   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
+# poetry.lock
+# poetry.toml
 
-  -d, --debug                      If brewing fails, open an interactive
-                                   debugging session with access to IRB or a
-                                   shell inside the temporary build directory.
-      --display-times              Print install times for each package at the
-                                   end of the run. Enabled by default if
-                                   $HOMEBREW_DISPLAY_INSTALL_TIMES is set.
-  -f, --force                      Install formulae without checking for
-                                   previously installed keg-only or non-migrated
-                                   versions. When installing casks, overwrite
-                                   existing files (binaries and symlinks are
-                                   excluded, unless originally from the same
-                                   cask).
-  -v, --verbose                    Print the verification and post-install
-                                   steps.
-  -n, --dry-run                    Show what would be installed, but do not
-                                   actually install anything.
-      --ask                        Ask for confirmation before downloading and
-                                   installing formulae. Print download and
-                                   install sizes of bottles and dependencies.
-                                   Enabled by default if $HOMEBREW_ASK is set.
-      --formula, --formulae        Treat all named arguments as formulae.
-      --ignore-dependencies        An unsupported Homebrew development option to
-                                   skip installing any dependencies of any kind.
-                                   If the dependencies are not already present,
-                                   the formula will have issues. If you're not
-                                   developing Homebrew, consider adjusting your
-                                   PATH rather than using this option.
-      --only-dependencies          Install the dependencies with specified
-                                   options but do not install the formula
-                                   itself.
-      --cc                         Attempt to compile using the specified
-                                   compiler, which should be the name of the
-                                   compiler's executable, e.g. gcc-9 for GCC
-                                   9. In order to use LLVM's clang, specify
-                                   llvm_clang. To use the Apple-provided
-                                   clang, specify clang. This option will only
-                                   accept compilers that are provided by
-                                   Homebrew or bundled with macOS. Please do not
-                                   file issues if you encounter errors while
-                                   using this option.
-  -s, --build-from-source          Compile formula from source even if a
-                                   bottle is provided. Dependencies will still
-                                   be installed from bottles if they are
-                                   available.
-      --force-bottle               Install from a bottle if it exists for the
-                                   current or newest version of macOS, even if
-                                   it would not normally be used for
-                                   installation.
-      --include-test               Install testing dependencies required to run
-                                   brew test formula.
-      --HEAD                       If formula defines it, install the HEAD
-                                   version, aka. main, trunk, unstable, master.
-      --fetch-HEAD                 Fetch the upstream repository to detect if
-                                   the HEAD installation of the formula is
-                                   outdated. Otherwise, the repository's HEAD
-                                   will only be checked for updates when a new
-                                   stable or development version has been
-                                   released.
-      --keep-tmp                   Retain the temporary files created during
-                                   installation.
-      --debug-symbols              Generate debug symbols on build. Source will
-                                   be retained in a cache directory.
-      --build-bottle               Prepare the formula for eventual bottling
-                                   during installation, skipping any
-                                   post-install steps.
-      --skip-post-install          Install but skip any post-install steps.
-      --skip-link                  Install but skip linking the keg into the
-                                   prefix.
-      --as-dependency              Install but mark as installed as a dependency
-                                   and not installed on request.
-      --bottle-arch                Optimise bottles for the specified
-                                   architecture rather than the oldest
-                                   architecture supported by the version of
-                                   macOS the bottles are built on.
-  -i, --interactive                Download and patch formula, then open a
-                                   shell. This allows the user to run
-                                   ./configure --help and otherwise determine
-                                   how to turn the software package into a
-                                   Homebrew package.
-  -g, --git                        Create a Git repository, useful for creating
-                                   patches to the software.
-      --overwrite                  Delete files that already exist in the prefix
-                                   while linking.
-      --cask, --casks              Treat all named arguments as casks.
-      --[no-]binaries              Disable/enable linking of helper executables
-                                   (default: enabled). Enabled by default if
-                                   $HOMEBREW_CASK_OPTS_BINARIES is set.
-      --require-sha                Require all casks to have a checksum. Enabled
-                                   by default if
-                                   $HOMEBREW_CASK_OPTS_REQUIRE_SHA is set.
-                                   $HOMEBREW_CASK_OPTS_QUARANTINE is set.
-                                   (deprecated)
-      --adopt                      Adopt existing artifacts in the destination
-                                   that are identical to those being installed.
-                                   Cannot be combined with --force.
-      --skip-cask-deps             Skip installing cask dependencies.
-      --zap                        For use with brew reinstall --cask. Remove
-  1 *.pyc
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-.gitignore                                                                                                                                                                                    1,1            All
-".gitignore" 1L, 6B
-  1 *.pyc
-                                   all files associated with a cask. May remove
-                                   files which are shared between applications.
-      --appdir                     Target location for Applications (default:
-                                   /Applications).
-      --keyboard-layoutdir         Target location for Keyboard Layouts
-                                   (default: /Library/Keyboard Layouts).
-      --colorpickerdir             Target location for Color Pickers (default:
-                                   ~/Library/ColorPickers).
-      --prefpanedir                Target location for Preference Panes
-                                   (default: ~/Library/PreferencePanes).
-      --qlplugindir                Target location for Quick Look Plugins
-                                   (default: ~/Library/QuickLook).
-      --mdimporterdir              Target location for Spotlight Plugins
-                                   (default: ~/Library/Spotlight).
-      --dictionarydir              Target location for Dictionaries (default:
-                                   ~/Library/Dictionaries).
-      --fontdir                    Target location for Fonts (default:
-                                   ~/Library/Fonts).
-      --servicedir                 Target location for Services (default:
-                                   ~/Library/Services).
-      --input-methoddir            Target location for Input Methods (default:
-                                   ~/Library/Input Methods).
-      --internet-plugindir         Target location for Internet Plugins
-                                   (default: ~/Library/Internet Plug-Ins).
-      --audio-unit-plugindir       Target location for Audio Unit Plugins
-                                   (default:
-                                   ~/Library/Audio/Plug-Ins/Components).
-      --vst-plugindir              Target location for VST Plugins (default:
-                                   ~/Library/Audio/Plug-Ins/VST).
-      --vst3-plugindir             Target location for VST3 Plugins (default:
-                                   ~/Library/Audio/Plug-Ins/VST3).
-      --screen-saverdir            Target location for Screen Savers (default:
-                                   ~/Library/Screen Savers).
-      --language                   Comma-separated list of language codes to
-                                   prefer for cask installation. The first
-                                   matching language is used, otherwise it
-                                   reverts to the cask's default language. The
-                                   default value is the language of your system.
-  -q, --quiet                      Make some output more quiet.
-  -h, --help                       Show this message.
+# pdm
+#   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in version control.
+#   pdm recommends including project-wide configuration in pdm.toml, but excluding .pdm-python.
+#   https://pdm-project.org/en/latest/usage/project/#working-with-version-control
+# pdm.lock
+# pdm.toml
+.pdm-python
+.pdm-build/
 
-Error: Invalid usage: This command requires at least 1 formula or cask argument.
-➜  principle git:(feature/testing) ✗ cd
-➜  ~ ccd -
-zsh: command not found: ccd
-➜  ~ cd -
-~/Documents/Shemetov_fossdev/testing/principle
-➜  principle git:(feature/testing) ✗ cd ../../
-➜  Shemetov_fossdev git:(feature/testing) ✗ python3.12 -m .venv venv
-/opt/homebrew/opt/python@3.12/bin/python3.12: Relative module names not supported
-➜  Shemetov_fossdev git:(feature/testing) ✗ python@3.12 -m .venv venv
-zsh: command not found: python@3.12
-➜  Shemetov_fossdev git:(feature/testing) ✗ python3.12 -m venv .venv
-➜  Shemetov_fossdev git:(feature/testing) ✗ vim .gitignore
-➜  Shemetov_fossdev git:(feature/testing) ✗ source ./.venv/bin/activate
-((.venv) ) ➜  Shemetov_fossdev git:(feature/testing) ✗ pip3 install setuptools
-Collecting setuptools
-  Using cached setuptools-82.0.0-py3-none-any.whl.metadata (6.6 kB)
-Using cached setuptools-82.0.0-py3-none-any.whl (1.0 MB)
-Installing collected packages: setuptools
-Successfully installed setuptools-82.0.0
+# pixi
+#   Similar to Pipfile.lock, it is generally recommended to include pixi.lock in version control.
+# pixi.lock
+#   Pixi creates a virtual environment in the .pixi directory, just like venv module creates one
+#   in the .venv directory. It is recommended not to include this directory in version control.
+.pixi
 
-[notice] A new release of pip is available: 26.0 -> 26.0.1
-[notice] To update, run: pip install --upgrade pip
-((.venv) ) ➜  Shemetov_fossdev git:(feature/testing) ✗ pip install -e .
-Obtaining file:///Users/alex/Documents/Shemetov_fossdev
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
+__pypackages__/
 
-[notice] A new release of pip is available: 26.0 -> 26.0.1
-[notice] To update, run: pip install --upgrade pip
-ERROR: file:///Users/alex/Documents/Shemetov_fossdev does not appear to be a Python project: neither 'setup.py' nor 'pyproject.toml' found.
-((.venv) ) ➜  Shemetov_fossdev git:(feature/testing) ✗ pip3 install -e .
-Obtaining file:///Users/alex/Documents/Shemetov_fossdev
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
 
-[notice] A new release of pip is available: 26.0 -> 26.0.1
-[notice] To update, run: pip install --upgrade pip
-ERROR: file:///Users/alex/Documents/Shemetov_fossdev does not appear to be a Python project: neither 'setup.py' nor 'pyproject.toml' found.
-((.venv) ) ➜  Shemetov_fossdev git:(feature/testing) ✗ cd testing/principle/tests
-((.venv) ) ➜  tests git:(feature/testing) ✗ ls
-test_principles.py
-((.venv) ) ➜  tests git:(feature/testing) ✗ cd ../
-((.venv) ) ➜  principle git:(feature/testing) ✗ ls
-setup.py src      tests
-((.venv) ) ➜  principle git:(feature/testing) ✗ pip install -e .
-Obtaining file:///Users/alex/Documents/Shemetov_fossdev/testing/principle
-  Installing build dependencies ... done
-  Checking if build backend supports build_editable ... done
-  Getting requirements to build editable ... done
-  Preparing editable metadata (pyproject.toml) ... done
-Building wheels for collected packages: math_demo
-  Building editable for math_demo (pyproject.toml) ... done
-  Created wheel for math_demo: filename=math_demo-0.0.0-0.editable-py3-none-any.whl size=1194 sha256=649fb6450a051c9510549dd4c054a371ee76c0086753b3454fde449c726fab4b
-  Stored in directory: /private/var/folders/pv/ppykc2bd3hl39b90n592yrh40000gn/T/pip-ephem-wheel-cache-49z_dxb2/wheels/a5/a7/dd/6731b95cbf4dba029e59e40dbaa5ae0521c8677162d511e682
-Successfully built math_demo
-Installing collected packages: math_demo
-  1 *.pyc
-  2 /.venv
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-.gitignore                                                                                                                                                                                    1,1            All
-".gitignore" 2L, 13B
+# Redis
+*.rdb
+*.aof
+*.pid
+
+# RabbitMQ
+mnesia/
+rabbitmq/
+rabbitmq-data/
+
+# ActiveMQ
+activemq-data/
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.envrc
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# PyCharm
+#   JetBrains specific template is maintained in a separate JetBrains.gitignore that can
+#   be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
+#   and can be added to the global gitignore or merged into this file.  For a more nuclear
+#   option (not recommended) you can uncomment the following to ignore the entire idea folder.
+# .idea/
+
+# Abstra
+#   Abstra is an AI-powered process automation framework.
+#   Ignore directories containing user credentials, local state, and settings.
+#   Learn more at https://abstra.io/docs
+.abstra/
+
+# Visual Studio Code
+#   Visual Studio Code specific template is maintained in a separate VisualStudioCode.gitignore 
+#   that can be found at https://github.com/github/gitignore/blob/main/Global/VisualStudioCode.gitignore
+#   and can be added to the global gitignore or merged into this file. However, if you prefer, 
+#   you could uncomment the following to ignore the entire vscode folder
+# .vscode/
+
+# Ruff stuff:
+.ruff_cache/
+
+# PyPI configuration file
+.pypirc
+
+# Marimo
+marimo/_static/
+marimo/_lsp/
+__marimo__/
+
+# Streamlit
+.streamlit/secrets.toml.vscode/

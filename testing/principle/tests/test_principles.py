@@ -84,7 +84,13 @@ def test_tax_calculator():
     assert calculate_tax(1) == 0.15
     assert calculate_tax(234) == 35.1
     print("Test tax calculator passed")
-    assert calculate_tax(2.34) == 0.35 # 0.351
+    assert calculate_tax    (2.34) == 0.35 # 0.351
+
+def test_negative_income():
+    try:
+        calculate_tax(-100)
+    except ValueError as e:
+        print("Test negative income error passed")
 
 
 

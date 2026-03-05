@@ -45,8 +45,22 @@ def test_addition_overkill():
             assert add(-i,-j) == -i - j
     print("Test overkill passed")
 
+
+def test_addition_clusters():
+    assert add(7,6) == 13
+    assert add(0,6) == 6
+    assert add(0,0) == 0
+    assert add(-70,60) == -10
+    assert add(-60,70) == 10
+    assert add(-60,0) == -60
+    assert add(0,-1100) == -1100
+    print("test clusters passed")
+
+
+
 if __name__ == "__main__":
     test_addition()
     #test_addition_with_bug()
     test_addition_dublicate()
-    test_addition_overkill()
+    # test_addition_overkill()
+    test_addition_clusters()

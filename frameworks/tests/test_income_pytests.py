@@ -1,6 +1,6 @@
 import pytest 
 
-from tax import calculate_tax
+from src_tax import calculate_tax
 
 def test_income(self):
     assert calculate_tax(100) == 13.0

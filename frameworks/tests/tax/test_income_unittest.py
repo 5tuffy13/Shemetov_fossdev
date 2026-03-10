@@ -1,5 +1,5 @@
 import unittest
-from tax import calculate_tax
+from src_tax import calculate_tax
 
 class TestTaxCalculator(unittest.TestCase):
     

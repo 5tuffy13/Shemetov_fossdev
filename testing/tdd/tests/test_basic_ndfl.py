@@ -6,8 +6,10 @@
 
 # TODO make test to obey principles
 
+#TODO fix pytest undefine
 
 from ndfl import calculate_ndfl
+import pytest
 
 def test_ndfl_tier_1_basic():
     assert calculate_ndfl(2_000_000) == 260_000
@@ -24,3 +26,7 @@ def test_ndfl_tier_4_basic():
 
 def test_ndfl_tier_5_basic():
     assert calculate_ndfl(60_000_000) == 11_602_000
+
+@pytest.mark.xfail
+def test_ndfl_fails_negative_income():
+    calculate_ndfl(-1000)

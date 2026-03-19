@@ -1,5 +1,4 @@
-help:
-	@echo "This makefile for repo-level activity"
+.DEFAULT_GOAL := help # таргет по умолчанию
 
 create-practice:
 	ifndef PRACTICE
@@ -11,6 +10,9 @@ create-practice:
 remove-practice:
 	@rm -rf $(PRACTICE)
 	@echo "Removed practice"
+
+help:
+	@echo "This makefile for repo-level activity"
 
 # mkdir demo-practice
 # mkdir demo-practice/src

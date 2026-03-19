@@ -1,11 +1,12 @@
 .DEFAULT_GOAL := help # таргет по умолчанию
 
 create-practice:
-	ifndef PRACTICE
-		$(error must pass val PRACTICE)
-	endif
+ifndef PRACTICE
+	$(error must pass val PRACTICE)
+endif
 	@mkdir -p $(PRACTICE)
 	@echo "Created practice"
+	cp PracticeMakefile $(PRACTICE)/Makefile
 
 remove-practice:
 	@rm -rf $(PRACTICE)

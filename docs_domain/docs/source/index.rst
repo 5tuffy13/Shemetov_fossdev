@@ -17,3 +17,4 @@ documentation for details.
 
    QUICKSTART
    USAGE
+   api/modules

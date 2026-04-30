@@ -1,0 +1,25 @@
+services:
+  product_service:
+    build: ./product_service
+    ports:
+      - "8001:8000"
+    networks:
+      - service-net
+
+  order_service:
+    build: ./order_service
+    ports:
+      - "8002:8000"
+    environment:
+      PRODUCT_SERVICE_URL: http://product_service:8000
+    depends_on:
+      - product_service
+    networks:
+      - service-net
+
+networks:
+  service-net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.28.10.0/24

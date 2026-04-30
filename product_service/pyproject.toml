@@ -1,0 +1,18 @@
+[project]
+name = "product-service"
+version = "0.0.1"
+description = ""
+authors = [
+    {name = "Your Name",email = "you@example.com"}
+]
+license = "MIT"
+requires-python = ">=3.12"
+dependencies = [
+    "uvicorn (>=0.46.0,<0.47.0)",
+    "httpx (>=0.28.1,<0.29.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

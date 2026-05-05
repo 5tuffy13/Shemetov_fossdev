@@ -12,10 +12,41 @@ services:
       - "8002:8000"
     environment:
       PRODUCT_SERVICE_URL: http://product_service:8000
+      DATABASE_URL: postgresql://app:app@db:5432/orders
     depends_on:
-      - product_service
+      product_service:
+        condition: service_started
+      db:
+        condition: service_healthy
     networks:
       - service-net
+
+    
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: app
+      POSTGRES_PASSWORD: app
+      POSTGRES_DB: orders
+    ports:
+      - "5432:5432"
+    volumes:
+      - order-db-data:/var/lib/postgresql/data
+
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U app -d orders"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+    networks:
+      - service-net
+
+  
+volumes:
+  order-db-data:
+
+
 
 networks:
   service-net:
